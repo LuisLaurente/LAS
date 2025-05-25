@@ -1,0 +1,129 @@
+@keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+        
+.bounce-gentle {
+    animation: bounce-gentle 2s infinite;
+}
+        
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+        
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+        
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+        
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+        
+.gradient-bg {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    transition: all 0.25s;
+    position: relative;
+    padding: 4px;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #374151;
+    transform: rotate(0);
+    transition: all 0.3s ease;
+    border-radius: 1px;
+}
+
+.hamburger-middle {
+    transform: translateY(6px);
+}
+
+.hamburger-bottom {
+    transform: translateY(12px);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(5px) translateX(5px);
+}
+
+.open .hamburger-middle {
+    opacity: 0;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(5px) translateX(-5px);
+}
+
+/* Estilos para enlaces de navegación */
+.nav-link {
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 197, 253, 0.1) 100%);
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(147, 197, 253, 0.15) 100%);
+    color: #1e40af;
+    font-weight: 600;
+}
+
+/* Menú móvil - compacto */
+.mobile-menu {
+    transform: translateY(-10px) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.mobile-menu.open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Overlay sutil para móvil */
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 30;
+}
+
+.mobile-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}

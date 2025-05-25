@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Assessment Solutions - Certificaciones de Inglés</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#60a5fa'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo - Responsive -->
+                <div class="flex items-center min-w-0 flex-1 sm:flex-none">
+                    <i class="fas fa-certificate text-primary text-xl sm:text-2xl mr-2 sm:mr-3 flex-shrink-0"></i>
+                    <span class="text-sm sm:text-lg lg:text-xl font-bold text-gray-800 truncate">
+                        <span class="hidden sm:inline">Language Assessment Solutions</span>
+                        <span class="sm:hidden">LAS</span>
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-1 xl:space-x-2">
+                    <a href="#inicio" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Inicio</a>
+                    <a href="#servicios" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Servicios</a>
+                    <a href="#certificaciones" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Certificaciones</a>
+                    <a href="#acerca" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Acerca de</a>
+                    <a href="#contacto" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Contacto</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden hamburger flex-shrink-0 ml-2" id="hamburger">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu - Compact -->
+        <div class="lg:hidden mobile-menu absolute top-16 right-4 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 z-40" id="mobile-menu">
+            <div class="p-4 space-y-2">
+                <a href="#inicio" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
+                    <i class="fas fa-home mr-3 text-primary w-4"></i>Inicio
+                </a>
+                <a href="#servicios" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
+                    <i class="fas fa-cogs mr-3 text-primary w-4"></i>Servicios
+                </a>
+                <a href="#certificaciones" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
+                    <i class="fas fa-award mr-3 text-primary w-4"></i>Certificaciones
+                </a>
+                <a href="#acerca" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
+                    <i class="fas fa-users mr-3 text-primary w-4"></i>Acerca de
+                </a>
+                <a href="#contacto" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
+                    <i class="fas fa-envelope mr-3 text-primary w-4"></i>Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg text-white pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Certificaciones de Inglés
+                    <span class="block text-accent">Reconocidas Mundialmente</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    Más de 15 años evaluando competencias lingüísticas con estándares internacionales de excelencia
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 hover-scale">
+                        Comenzar Evaluación
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                        Ver Certificaciones
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f9fafb"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+<section id="servicios" class="py-20 bg-gray-50 relative overflow-hidden">
+    <!-- Formas decorativas de fondo -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-bl from-purple-200 to-pink-200 rounded-full opacity-20 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-1/4 w-64 h-64 bg-gradient-to-tr from-green-200 to-blue-200 rounded-full opacity-20 translate-y-1/2"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">¿Qué servicios ofrecemos en evaluación de inglés?</h2>
+            <p class="text-xl text-gray-600">Soluciones integrales para todas tus necesidades de certificación</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Exámenes Estandarizados -->
+            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blue-400 to-blue-600 rounded-bl-full opacity-10"></div>
+                <div class="relative z-10">
+                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Exámenes Estandarizados</h3>
+                    <p class="text-gray-600 leading-relaxed">Evaluaciones rigurosas basadas en marcos internacionales como CEFR, diseñadas para medir competencias lingüísticas de manera precisa y confiable.</p>
+                </div>
+            </div>
+
+            <!-- Certificación Académica -->
+            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-green-400 to-green-600 rounded-bl-full opacity-10"></div>
+                <div class="relative z-10">
+                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Certificación Académica</h3>
+                    <p class="text-gray-600 leading-relaxed">Certificados reconocidos por instituciones educativas para admisiones universitarias, programas de intercambio y estudios superiores.</p>
+                </div>
+            </div>
+
+            <!-- Certificación Profesional -->
+            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-purple-400 to-purple-600 rounded-bl-full opacity-10"></div>
+                <div class="relative z-10">
+                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Certificación Profesional</h3>
+                    <p class="text-gray-600 leading-relaxed">Validación de competencias lingüísticas para el ámbito laboral, reconocida por empleadores y organizaciones profesionales.</p>
+                </div>
+            </div>
+
+            <!-- Soluciones Corporativas -->
+            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-orange-400 to-orange-600 rounded-bl-full opacity-10"></div>
+                <div class="relative z-10">
+                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Soluciones Corporativas</h3>
+                    <p class="text-gray-600 leading-relaxed">Programas personalizados para empresas que buscan evaluar y certificar las competencias en inglés de sus equipos de trabajo.</p>
+                </div>
+            </div>
+
+            <!-- Recursos de Preparación -->
+            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden md:col-span-2 lg:col-span-1">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-pink-400 to-pink-600 rounded-bl-full opacity-10"></div>
+                <div class="relative z-10">
+                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Recursos de Preparación</h3>
+                    <p class="text-gray-600 leading-relaxed">Materiales de estudio, simulacros de examen y guías especializadas para prepararte efectivamente para tu certificación.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Certificaciones Section -->
+<section id="certificaciones" class="py-20 bg-white relative overflow-hidden">
+    <!-- Formas geométricas de fondo -->
+    <div class="absolute top-0 right-0 w-80 h-80 opacity-5">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#3B82F6" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,89.8,-0.2C89.6,15.9,86.6,31.8,78.9,45.2C71.2,58.6,58.8,69.5,44.7,76.4C30.6,83.3,15.3,86.2,0.1,86.1C-15.1,86,-30.2,82.9,-44.7,76.4C-59.2,69.9,-73.1,60,-81.6,46.8C-90.1,33.6,-93.2,17.1,-93.4,0.4C-93.6,-16.3,-90.9,-32.6,-82.4,-45.8C-73.9,-59,-59.6,-69.1,-44.7,-76.4C-29.8,-83.7,-14.9,-88.2,0.1,-88.3C15.1,-88.4,30.2,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+        </svg>
+    </div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 opacity-5">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#8B5CF6" d="M39.9,-69.8C52.7,-63.2,64.8,-53.4,72.4,-40.8C80,-28.2,83.1,-14.1,83.5,0.2C83.9,14.5,81.6,29,74.8,41.8C68,54.6,56.7,65.7,43.9,72.4C31.1,79.1,15.6,81.4,0.7,80.4C-14.2,79.4,-28.4,75.1,-41.1,68.4C-53.8,61.7,-65,52.6,-72.4,40.8C-79.8,29,-83.4,14.5,-83.7,-0.2C-84,-14.9,-81,-29.8,-73.6,-42.1C-66.2,-54.4,-54.4,-64.1,-41.1,-70.7C-27.8,-77.3,-13.9,-80.8,0.7,-82C15.3,-83.2,30.6,-82.1,39.9,-69.8Z" transform="translate(100 100)" />
+        </svg>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 fade-in">
+            <div class="inline-block p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl mb-6">
+                <i class="fas fa-award text-4xl text-primary"></i>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">¿Qué certificaciones ofrecemos?</h2>
+            <p class="text-xl text-gray-600">Niveles de competencia reconocidos internacionalmente</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- A1-A2 -->
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+                <div class="relative bg-gradient-to-br from-green-400 to-green-600 text-white rounded-2xl p-8 hover-scale fade-in transform group-hover:-rotate-1 transition-transform duration-300">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-seedling text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2">A1-A2</div>
+                    <h3 class="text-xl font-semibold mb-4">Inglés Básico</h3>
+                    <p class="text-green-100 leading-relaxed">Comprensión y uso de expresiones cotidianas. Capacidad para presentarse y hacer preguntas básicas sobre información personal.</p>
+                </div>
+            </div>
+
+            <!-- B1 -->
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl transform -rotate-2 group-hover:-rotate-4 transition-transform duration-300"></div>
+                <div class="relative bg-gradient-to-br from-blue-400 to-blue-600 text-white rounded-2xl p-8 hover-scale fade-in transform group-hover:rotate-1 transition-transform duration-300">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-mountain text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2">B1</div>
+                    <h3 class="text-xl font-semibold mb-4">Inglés Intermedio</h3>
+                    <p class="text-blue-100 leading-relaxed">Comprensión de textos sobre temas familiares. Capacidad para describir experiencias, eventos y expresar opiniones de manera sencilla.</p>
+                </div>
+            </div>
+
+            <!-- B2 -->
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl transform rotate-1 group-hover:rotate-3 transition-transform duration-300"></div>
+                <div class="relative bg-gradient-to-br from-purple-400 to-purple-600 text-white rounded-2xl p-8 hover-scale fade-in transform group-hover:-rotate-2 transition-transform duration-300">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2">B2</div>
+                    <h3 class="text-xl font-semibold mb-4">Intermedio Alto</h3>
+                    <p class="text-purple-100 leading-relaxed">Comprensión de textos complejos y comunicación fluida con hablantes nativos. Capacidad para argumentar y defender puntos de vista.</p>
+                </div>
+            </div>
+
+            <!-- C1 -->
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl transform -rotate-1 group-hover:-rotate-3 transition-transform duration-300"></div>
+                <div class="relative bg-gradient-to-br from-orange-400 to-orange-600 text-white rounded-2xl p-8 hover-scale fade-in transform group-hover:rotate-2 transition-transform duration-300">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-crown text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2">C1</div>
+                    <h3 class="text-xl font-semibold mb-4">Inglés Avanzado</h3>
+                    <p class="text-orange-100 leading-relaxed">Comprensión de textos extensos y complejos. Uso flexible y efectivo del idioma para fines académicos y profesionales.</p>
+                </div>
+            </div>
+
+            <!-- C2 -->
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl transform rotate-2 group-hover:rotate-4 transition-transform duration-300"></div>
+                <div class="relative bg-gradient-to-br from-red-400 to-red-600 text-white rounded-2xl p-8 hover-scale fade-in transform group-hover:-rotate-1 transition-transform duration-300">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-trophy text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2">C2</div>
+                    <h3 class="text-xl font-semibold mb-4">Dominio del Idioma</h3>
+                    <p class="text-red-100 leading-relaxed">Comprensión total del idioma. Capacidad para expresarse de manera espontánea, fluida y precisa en cualquier situación compleja.</p>
+                </div>
+            </div>
+
+            <!-- Business -->
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+                <div class="relative bg-gradient-to-br from-gray-700 to-gray-900 text-white rounded-2xl p-8 hover-scale fade-in transform group-hover:rotate-1 transition-transform duration-300">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-handshake text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2">Business</div>
+                    <h3 class="text-xl font-semibold mb-4">Inglés Empresarial</h3>
+                    <p class="text-gray-300 leading-relaxed">Competencias específicas para el ámbito corporativo. Comunicación efectiva en presentaciones, negociaciones y entornos profesionales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Acerca de Section -->
+<section id="acerca" class="py-20 bg-gray-50 relative overflow-hidden">
+    <!-- Elementos decorativos de fondo -->
+    <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute top-40 right-20 w-24 h-24 bg-purple-200 rounded-full opacity-30"></div>
+        <div class="absolute bottom-20 left-1/4 w-40 h-40 bg-green-200 rounded-full opacity-15"></div>
+        <div class="absolute bottom-40 right-10 w-28 h-28 bg-pink-200 rounded-full opacity-25"></div>
+    </div>
+    
+    <!-- Patrón geométrico -->
+    <div class="absolute inset-0 opacity-5">
+        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <path d="m 60,0 L 0,0 0,60" fill="none" stroke="#3B82F6" stroke-width="1"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="fade-in">
+                <div class="inline-block p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6">
+                    <i class="fas fa-users text-3xl text-white"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Acerca de Language Assessment Solutions</h2>
+                <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                    <div class="relative pl-6">
+                        <div class="absolute left-0 top-2 w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <p>Con más de 15 años de experiencia en evaluación lingüística, Language Assessment Solutions se ha convertido en un nombre de confianza en certificación de inglés a nivel mundial. Nuestras evaluaciones son reconocidas por miles de instituciones educativas y empleadores en todo el mundo.</p>
+                    </div>
+                    
+                    <div class="relative pl-6">
+                        <div class="absolute left-0 top-2 w-3 h-3 bg-purple-500 rounded-full"></div>
+                        <p>Nuestro equipo de lingüistas, educadores y especialistas en evaluación desarrolla y mantiene estándares rigurosos de certificación que miden con precisión la competencia en inglés según marcos internacionales.</p>
+                    </div>
+                    
+                    <div class="relative pl-6">
+                        <div class="absolute left-0 top-2 w-3 h-3 bg-green-500 rounded-full"></div>
+                        <p>Nos enorgullecemos de ofrecer evaluaciones justas, accesibles y confiables que abren puertas a oportunidades académicas y profesionales para examinados en todo el mundo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fade-in">
+                <div class="relative">
+                    <!-- Fondo decorativo para las estadísticas -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl transform rotate-3"></div>
+                    <div class="relative bg-white rounded-3xl shadow-2xl p-8 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Nuestros Logros</h3>
+                        <div class="grid grid-cols-2 gap-8 text-center">
+                            <div class="group">
+                                <div class="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">5+</div>
+                                <div class="text-gray-600 font-medium">Años de Experiencia</div>
+                            </div>
+                            <div class="group">
+                                <div class="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">150+</div>
+                                <div class="text-gray-600 font-medium">Instituciones Aliadas</div>
+                            </div>
+                            <div class="group">
+                                <div class="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">25+</div>
+                                <div class="text-gray-600 font-medium">Ciudades</div>
+                            </div>
+                            <div class="group">
+                                <div class="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">5K+</div>
+                                <div class="text-gray-600 font-medium">Certificados Emitidos</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Elementos decorativos dentro de la card -->
+                        <div class="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-20"></div>
+                        <div class="absolute bottom-4 left-4 w-6 h-6 bg-gradient-to-br from-green-400 to-blue-500 rounded-full opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contacto Section -->
+<section id="contacto" class="py-20 bg-white relative overflow-hidden">
+    <!-- Fondo con ondas -->
+    <div class="absolute top-0 left-0 w-full h-32">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0L60 10C120 20 240 40 360 50C480 60 600 60 720 55C840 50 960 40 1080 35C1200 30 1320 30 1380 30L1440 30V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0Z" fill="#f3f4f6" fill-opacity="0.5"/>
+        </svg>
+    </div>
+    
+    <!-- Elementos decorativos flotantes -->
+    <div class="absolute top-20 right-20 w-20 h-20 bg-gradient-to-br from-blue-300 to-purple-400 rounded-2xl opacity-20 transform rotate-45"></div>
+    <div class="absolute bottom-32 left-16 w-16 h-16 bg-gradient-to-br from-green-300 to-blue-400 rounded-full opacity-25"></div>
+    <div class="absolute top-1/2 left-10 w-12 h-12 bg-gradient-to-br from-pink-300 to-red-400 rounded-2xl opacity-20 transform rotate-12"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 fade-in">
+            <div class="inline-block p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-6">
+                <i class="fas fa-envelope text-4xl text-primary"></i>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Información de Contacto</h2>
+            <p class="text-xl text-gray-600">Estamos aquí para ayudarte en tu proceso de certificación</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Información de contacto -->
+            <div class="fade-in">
+                <div class="relative">
+                    <!-- Fondo decorativo -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl transform rotate-2"></div>
+                    <div class="relative bg-white rounded-3xl shadow-xl p-8 transform -rotate-1">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-8">Síguenos en nuestras redes sociales</h3>
+                        <div class="flex space-x-4 mb-8">
+                            <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-rotate-12">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </a>
+                            <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-110 hover:rotate-12">
+                                <i class="fab fa-tiktok text-xl"></i>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-black rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </a>
+                            <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-rotate-12">
+                                <i class="fab fa-instagram text-xl"></i>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </a>
+                            <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-blue-700 hover:text-white transition-all duration-300 transform hover:scale-110 hover:rotate-12">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </a>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <span class="text-gray-600 text-lg">info@languageassessment.com</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <span class="text-gray-600 text-lg">+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <span class="text-gray-600 text-lg">123 Education Street, Learning City, LC 12345</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Formulario -->
+            <div class="fade-in">
+                <div class="relative">
+                    <!-- Fondo decorativo del formulario -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl transform -rotate-2"></div>
+                    <div class="relative bg-white rounded-3xl shadow-2xl p-8 transform rotate-1">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Envíanos un mensaje</h3>
+                        <form class="space-y-6">
+                            <div class="relative">
+                                <input type="text" placeholder="Nombre completo" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
+                                <div class="absolute top-4 right-4 text-gray-400">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <input type="email" placeholder="Correo electrónico" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
+                                <div class="absolute top-4 right-4 text-gray-400">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <input type="tel" placeholder="Teléfono" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
+                                <div class="absolute top-4 right-4 text-gray-400">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <select class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white appearance-none">
+                                    <option>Selecciona un servicio</option>
+                                    <option>Exámenes Estandarizados</option>
+                                    <option>Certificación Académica</option>
+                                    <option>Certificación Profesional</option>
+                                    <option>Soluciones Corporativas</option>
+                                    <option>Recursos de Preparación</option>
+                                </select>
+                                <div class="absolute top-4 right-4 text-gray-400">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <textarea rows="4" placeholder="Mensaje" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white resize-none"></textarea>
+                                <div class="absolute top-4 right-4 text-gray-400">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-primary to-purple-600 text-white py-4 rounded-2xl font-semibold hover:from-blue-700 hover:to-purple-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-certificate text-accent text-2xl mr-3"></i>
+                        <span class="text-xl font-bold">Language Assessment Solutions</span>
+                    </div>
+                    <p class="text-gray-400">Certificaciones de inglés reconocidas mundialmente con más de 15 años de experiencia.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Exámenes Estandarizados</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Certificación Académica</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Certificación Profesional</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Soluciones Corporativas</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Certificaciones</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Niveles A1-A2</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Nivel B1</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Nivel B2</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Niveles C1-C2</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Business English</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@languageassessment.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>123 Education Street</li>
+                        <li>Learning City, LC 12345</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Language Assessment Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl hover:bg-green-600 transition duration-300 bounce-gentle z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-6 left-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300 opacity-0 invisible z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="index.js"></script>
+</body>
+</html>
