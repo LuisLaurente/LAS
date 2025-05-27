@@ -87,28 +87,175 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="gradient-bg text-white pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center fade-in">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    Certificaciones de Inglés
-                    <span class="block text-accent">Reconocidas Mundialmente</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                    Más de 15 años evaluando competencias lingüísticas con estándares internacionales de excelencia
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 hover-scale">
-                        Comenzar Evaluación
-                    </button>
-                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
-                        Ver Certificaciones
-                    </button>
+    <section id="inicio" class="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
+            <div class="absolute top-40 right-20 w-24 h-24 border border-white/20 rounded-full"></div>
+            <div class="absolute bottom-40 left-1/4 w-16 h-16 border border-white/20 rounded-full"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-32">
+            <div class="text-center space-y-8">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 text-sm">
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>Certificación TOEFL Oficial - ETS Authorized</span>
+                </div>
+
+                <!-- Main Heading -->
+                <div class="space-y-4">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                        Tu Pasaporte al Mundo
+                        <span class="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                            TOEFL ITP & iBT
+                        </span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                        El examen de inglés más reconocido mundialmente. Abre las puertas a las mejores universidades, 
+                        becas internacionales y oportunidades profesionales globales
+                    </p>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto py-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-yellow-400">11,500+</div>
+                        <div class="text-blue-200">Universidades lo Aceptan</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-yellow-400">160+</div>
+                        <div class="text-blue-200">Países de Reconocimiento</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-yellow-400">50M+</div>
+                        <div class="text-blue-200">Personas Certificadas</div>
+                    </div>
+                </div>
+
+                <!-- TOEFL Types -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto py-6">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-left">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">TOEFL ITP</h3>
+                        </div>
+                        <p class="text-blue-100 mb-3">Ideal para evaluación académica interna, diagnósticos y requisitos de graduación</p>
+                        <ul class="text-sm text-blue-200 space-y-1">
+                            <li>• Formato en papel</li>
+                            <li>• Evaluación institucional</li>
+                            <li>• Resultados inmediatos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-left">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">TOEFL iBT</h3>
+                        </div>
+                        <p class="text-blue-100 mb-3">Para admisiones universitarias, becas, migración y oportunidades internacionales</p>
+                        <ul class="text-sm text-blue-200 space-y-1">
+                            <li>• Formato digital</li>
+                            <li>• Reconocimiento global</li>
+                            <li>• 4 habilidades evaluadas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                    <a class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 text-lg rounded-lg transition duration-300 transform hover:scale-105 cursor-pointer" href="#certificaciones">
+                        Conoce nuestros Exámenes
+                    </a>
+                    <a href="https://wa.me/51927365498" class="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg rounded-lg font-semibold transition duration-300">
+                        Habla con un Asesor
+                    </a>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap justify-center items-center gap-6 pt-8 text-sm text-blue-200">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Aceptado por Harvard, MIT, Stanford</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Requisito para visas de estudio</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Válido por 2 años</span>
+                    </div>
+                </div>
+
+                <!-- Additional Benefits -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 max-w-4xl mx-auto mt-8">
+                    <h3 class="text-2xl font-bold mb-4">¿Por qué elegir TOEFL?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-white">Estándar de Oro</h4>
+                                    <p class="text-blue-200 text-sm">El examen más respetado y confiable del mundo</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-white">Reconocimiento Global</h4>
+                                    <p class="text-blue-200 text-sm">Aceptado en más países que cualquier otro examen</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-white">Evaluación Integral</h4>
+                                    <p class="text-blue-200 text-sm">Mide todas las habilidades: Reading, Listening, Speaking, Writing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-white">Flexibilidad</h4>
+                                    <p class="text-blue-200 text-sm">Múltiples fechas y centros de examen disponibles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="wave-bottom">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Wave Bottom - FIXED VERSION -->
+        <div class="absolute bottom-0 left-0 right-0 h-20 overflow-hidden">
+            <svg class="absolute bottom-0 w-full h-20" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                 <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f9fafb"/>
             </svg>
         </div>
@@ -539,7 +686,7 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl hover:bg-green-600 transition duration-300 bounce-gentle z-50">
+    <a href="https://wa.me/51927365498" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl hover:bg-green-600 transition duration-300 bounce-gentle z-50">
         <i class="fab fa-whatsapp"></i>
     </a>
 
