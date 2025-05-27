@@ -99,13 +99,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const navbarOffset = 55; // Cambia esto si tu navbar tiene otra altura
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarOffset;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         }
     });
 });
+
 
 // Fade in animation on scroll
 const observerOptions = {
