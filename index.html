@@ -34,27 +34,78 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header/Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo - Responsive -->
+    <nav class="fixed w-full top-0 z-50 transition-all duration-300 ">
+        <!-- Background with blur effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-blue-900/95 to-slate-900/95 backdrop-blur-xl"></div>
+        
+        <!-- Animated grid overlay -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 30px 30px;"></div>
+        </div>
+        
+        <!-- Floating elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-2 left-20 w-32 h-32 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-2xl animate-float-slow"></div>
+            <div class="absolute top-1 right-40 w-24 h-24 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-2xl animate-float-slow" style="animation-delay: 2s"></div>
+            
+            <!-- Small geometric elements -->
+            <div class="absolute top-4 left-1/4 w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rotate-45 animate-pulse"></div>
+            <div class="absolute top-6 right-1/3 w-1 h-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-pulse" style="animation-delay: 1s"></div>
+            
+            <!-- Animated line -->
+            <div class="absolute top-8 left-0 w-20 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent animate-slide-right"></div>
+        </div>
+        
+        <!-- Main navbar content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
                 <div class="flex items-center min-w-0 flex-1 sm:flex-none">
-                    <span class="text-sm sm:text-lg lg:text-xl font-bold text-gray-800 truncate">
-                        <img src="/images/logoLAS.webp" alt="" style="width: 7rem;">
-                    </span>
+                    <div class="group relative">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl px-4 py-2">
+                            <div class="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
+                            <span class="text-xl text-white font-semibold">
+                                Language Assessment Solutions
+                            </span>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex space-x-1 xl:space-x-2">
-                    <a href="#inicio" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Inicio</a>
-                    <a href="#servicios" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Servicios</a>
-                    <a href="#certificaciones" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Certificaciones</a>
-                    <a href="#acerca" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Acerca de</a>
-                    <a href="#contacto" class="nav-link text-gray-700 hover:text-primary transition duration-300 text-sm xl:text-base">Contacto</a>
+                <div class="hidden lg:flex space-x-8">
+                    <a href="#inicio" class="nav-link text-slate-200 hover:text-white transition-all duration-300 text-sm xl:text-base font-medium px-3 py-2 rounded-lg hover:bg-slate-800/30">
+                        Inicio
+                    </a>
+                    <a href="#servicios" class="nav-link text-slate-200 hover:text-white transition-all duration-300 text-sm xl:text-base font-medium px-3 py-2 rounded-lg hover:bg-slate-800/30">
+                        Servicios
+                    </a>
+                    <a href="#certificaciones" class="nav-link text-slate-200 hover:text-white transition-all duration-300 text-sm xl:text-base font-medium px-3 py-2 rounded-lg hover:bg-slate-800/30">
+                        Certificaciones
+                    </a>
+                    <a href="#acerca" class="nav-link text-slate-200 hover:text-white transition-all duration-300 text-sm xl:text-base font-medium px-3 py-2 rounded-lg hover:bg-slate-800/30">
+                        Acerca de
+                    </a>
+                    <a href="#contacto" class="nav-link text-slate-200 hover:text-white transition-all duration-300 text-sm xl:text-base font-medium px-3 py-2 rounded-lg hover:bg-slate-800/30">
+                        Contacto
+                    </a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden lg:flex">
+                    <a href="https://wa.me/51927365498" class="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                        <span class="relative z-10 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Asesoría
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    </a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button class="lg:hidden hamburger flex-shrink-0 ml-2" id="hamburger">
+                <button class="lg:hidden hamburger flex-shrink-0 ml-4" id="hamburger">
                     <span class="hamburger-top"></span>
                     <span class="hamburger-middle"></span>
                     <span class="hamburger-bottom"></span>
@@ -62,673 +113,697 @@
             </div>
         </div>
         
-        <!-- Mobile Menu - Compact -->
-        <div class="lg:hidden mobile-menu absolute top-16 right-4 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 z-40" id="mobile-menu">
-            <div class="p-4 space-y-2">
-                <a href="#inicio" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
-                    <i class="fas fa-home mr-3 text-primary w-4"></i>Inicio
-                </a>
-                <a href="#servicios" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
-                    <i class="fas fa-cogs mr-3 text-primary w-4"></i>Servicios
-                </a>
-                <a href="#certificaciones" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
-                    <i class="fas fa-award mr-3 text-primary w-4"></i>Certificaciones
-                </a>
-                <a href="#acerca" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
-                    <i class="fas fa-users mr-3 text-primary w-4"></i>Acerca de
-                </a>
-                <a href="#contacto" class="block nav-link text-gray-700 hover:text-primary transition duration-300 py-3 px-4 rounded-xl">
-                    <i class="fas fa-envelope mr-3 text-primary w-4"></i>Contacto
-                </a>
+        <!-- Mobile Menu -->
+        <div class="lg:hidden mobile-menu absolute top-20 right-4 w-72" id="mobile-menu">
+            <div class="relative">
+                <!-- Background with blur -->
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-2xl"></div>
+                
+                <!-- Border gradient -->
+                <div class="absolute -inset-px bg-gradient-to-br from-purple-500/50 to-pink-500/50 rounded-2xl blur-sm"></div>
+                
+                <!-- Content -->
+                <div class="relative bg-slate-800/50 rounded-2xl border border-slate-700/50 p-6 space-y-2">
+                    <a href="#inicio" class="group flex items-center nav-link text-slate-200 hover:text-white transition-all duration-300 py-3 px-4 rounded-xl hover:bg-slate-700/30">
+                        <div class="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-4 group-hover:animate-pulse"></div>
+                        <span class="font-medium">Inicio</span>
+                    </a>
+                    <a href="#servicios" class="group flex items-center nav-link text-slate-200 hover:text-white transition-all duration-300 py-3 px-4 rounded-xl hover:bg-slate-700/30">
+                        <div class="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full mr-4 group-hover:animate-pulse"></div>
+                        <span class="font-medium">Servicios</span>
+                    </a>
+                    <a href="#certificaciones" class="group flex items-center nav-link text-slate-200 hover:text-white transition-all duration-300 py-3 px-4 rounded-xl hover:bg-slate-700/30">
+                        <div class="w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full mr-4 group-hover:animate-pulse"></div>
+                        <span class="font-medium">Certificaciones</span>
+                    </a>
+                    <a href="#acerca" class="group flex items-center nav-link text-slate-200 hover:text-white transition-all duration-300 py-3 px-4 rounded-xl hover:bg-slate-700/30">
+                        <div class="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full mr-4 group-hover:animate-pulse"></div>
+                        <span class="font-medium">Acerca de</span>
+                    </a>
+                    <a href="#contacto" class="group flex items-center nav-link text-slate-200 hover:text-white transition-all duration-300 py-3 px-4 rounded-xl hover:bg-slate-700/30">
+                        <div class="w-2 h-2 bg-gradient-to-r from-rose-400 to-pink-400 rounded-full mr-4 group-hover:animate-pulse"></div>
+                        <span class="font-medium">Contacto</span>
+                    </a>
+                    
+                    <!-- Mobile CTA -->
+                    <div class="pt-4 border-t border-slate-700/50">
+                        <a href="https://wa.me/51927365498" class="flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            <span>Asesoría Gratuita</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section Ultra Modern -->
-<section id="inicio" class="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
-    <!-- Animated Background Grid -->
-    <div class="absolute inset-0 opacity-20">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 50px 50px;"></div>
-    </div>
-    
-    <!-- Floating Geometric Shapes -->
-    <div class="absolute inset-0 overflow-hidden">
-        <!-- Large floating elements -->
-        <div class="absolute top-20 -left-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-float-slow"></div>
-        <div class="absolute -top-40 right-20 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-float-slow" style="animation-delay: 2s"></div>
-        <div class="absolute bottom-20 left-1/3 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-float-slow" style="animation-delay: 4s"></div>
+    <section id="inicio" class="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
+        <!-- Animated Background Grid -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 50px 50px;"></div>
+        </div>
         
-        <!-- Geometric shapes -->
-        <div class="absolute top-1/4 left-10 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rotate-45 animate-spin-slow"></div>
-        <div class="absolute top-1/3 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-bounce-slow"></div>
-        <div class="absolute bottom-1/3 right-10 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 animate-pulse"></div>
-        
-        <!-- Floating lines -->
-        <div class="absolute top-1/2 left-0 w-32 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-slide-right"></div>
-        <div class="absolute top-1/3 right-0 w-24 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-slide-left"></div>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
-        <!-- Top Badge - Floating -->
-        <div class="flex justify-center mb-8">
-            <div class="group relative">
-                <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                <div class="relative bg-slate-900 rounded-full px-6 py-3 flex items-center gap-3 border border-purple-500/50">
-                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span class="text-sm font-medium bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        ETS Authorized • Certificación Oficial TOEFL
-                    </span>
-                </div>
-            </div>
+        <!-- Floating Geometric Shapes -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Large floating elements -->
+            <div class="absolute top-20 -left-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-float-slow"></div>
+            <div class="absolute -top-40 right-20 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-float-slow" style="animation-delay: 2s"></div>
+            <div class="absolute bottom-20 left-1/3 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-float-slow" style="animation-delay: 4s"></div>
+            
+            <!-- Geometric shapes -->
+            <div class="absolute top-1/4 left-10 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rotate-45 animate-spin-slow"></div>
+            <div class="absolute top-1/3 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-bounce-slow"></div>
+            <div class="absolute bottom-1/3 right-10 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 animate-pulse"></div>
+            
+            <!-- Floating lines -->
+            <div class="absolute top-1/2 left-0 w-32 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-slide-right"></div>
+            <div class="absolute top-1/3 right-0 w-24 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-slide-left"></div>
         </div>
 
-        <!-- Main Content Grid -->
-        <div class="grid lg:grid-cols-12 gap-8 items-center">
-            <!-- Left Content -->
-            <div class="lg:col-span-7 space-y-8">
-                <!-- Main Heading -->
-                <div class="space-y-6">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-none">
-                        <span class="block text-white">Tu</span>
-                        <span class="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-gradient">
-                            Futuro
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
+            <!-- Top Badge - Floating -->
+            <div class="flex justify-center mb-8 mt-4">
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div class="relative bg-slate-900 rounded-full px-6 py-3 flex items-center gap-3 border border-purple-500/50">
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-Spulse"></div>
+                        <span class="text-sm font-medium bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                            ETS Authorized • Certificación Oficial TOEFL
                         </span>
-                        <span class="block text-white">Global</span>
-                    </h1>
-                    
-                    <div class="relative">
-                        <h2 class="text-2xl md:text-4xl font-bold text-slate-300">
-                            Comienza con 
-                            <span class="relative inline-block">
-                                <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">TOEFL</span>
-                                <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Main Heading -->
+                    <div class="space-y-6">
+                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-none">
+                            <span class="block text-white">Tu</span>
+                            <span class="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-gradient">
+                                Futuro
                             </span>
-                        </h2>
-                    </div>
-                    
-                    <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
-                        Desbloquea oportunidades ilimitadas en las mejores universidades del mundo. 
-                        <span class="text-purple-400 font-semibold">11,500+ instituciones</span> confían en TOEFL.
-                    </p>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#certificaciones" class="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-                        <span class="relative z-10 flex items-center gap-3">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                            Explorar Exámenes
-                        </span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                    </a>
-                    
-                    <a href="https://wa.me/51927365498" class="group relative overflow-hidden border-2 border-slate-600 hover:border-cyan-400 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105">
-                        <span class="relative z-10 flex items-center gap-3 text-slate-300 group-hover:text-white">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            Asesoría Gratuita
-                        </span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                    </a>
-                </div>
-
-                <!-- Trust Indicators -->
-                <div class="flex flex-wrap gap-6 text-sm">
-                    <div class="flex items-center gap-2 text-slate-400">
-                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                        <span>Harvard • MIT • Stanford</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-slate-400">
-                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-                        <span>160+ Países</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-slate-400">
-                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-                        <span>50M+ Certificados</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Content - Floating Cards -->
-            <div class="lg:col-span-5 relative">
-                <!-- Stats Cards Floating -->
-                <div class="relative space-y-6">
-                    <!-- Card 1 -->
-                    <div class="group relative ml-8 transform hover:scale-105 transition-all duration-500">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
-                        <div class="relative bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-2xl p-6">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <div class="text-3xl font-bold text-white">11,500+</div>
-                                    <div class="text-slate-400">Universidades</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="group relative mr-8 transform hover:scale-105 transition-all duration-500" style="animation-delay: 0.2s">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
-                        <div class="relative bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-2xl p-6">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <div class="text-3xl font-bold text-white">160+</div>
-                                    <div class="text-slate-400">Países</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="group relative ml-4 transform hover:scale-105 transition-all duration-500" style="animation-delay: 0.4s">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
-                        <div class="relative bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-2xl p-6">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <div class="text-3xl font-bold text-white">50M+</div>
-                                    <div class="text-slate-400">Certificados</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TOEFL Types - Modern Cards -->
-        <div class="mt-20 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <!-- TOEFL ITP -->
-            <div class="group relative">
-                <div class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
-                <div class="relative bg-slate-800/90 backdrop-blur-xl border border-slate-700 rounded-3xl p-8 h-full">
-                    <div class="flex items-start gap-4 mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-2">TOEFL ITP</h3>
-                            <div class="inline-block bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-medium">
-                                Evaluación Institucional
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <p class="text-slate-300 mb-6 text-lg leading-relaxed">
-                        Perfecto para evaluaciones académicas internas, diagnósticos de nivel y requisitos de graduación universitaria.
-                    </p>
-                    
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3 text-slate-300">
-                            <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                            <span>Formato en papel tradicional</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-300">
-                            <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                            <span>Resultados inmediatos</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-300">
-                            <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                            <span>Ideal para instituciones educativas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TOEFL iBT -->
-            <div class="group relative">
-                <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
-                <div class="relative bg-slate-800/90 backdrop-blur-xl border border-slate-700 rounded-3xl p-8 h-full">
-                    <div class="flex items-start gap-4 mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-2">TOEFL iBT</h3>
-                            <div class="inline-block bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium">
-                                Reconocimiento Global
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <p class="text-slate-300 mb-6 text-lg leading-relaxed">
-                        El estándar de oro para admisiones universitarias, becas internacionales y oportunidades profesionales globales.
-                    </p>
-                    
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3 text-slate-300">
-                            <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-                            <span>Formato digital avanzado</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-300">
-                            <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-                            <span>4 habilidades evaluadas</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-300">
-                            <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-                            <span>Aceptado mundialmente</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom CTA Section -->
-        <div class="mt-20 text-center">
-            <div class="relative inline-block">
-                <div class="absolute -inset-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-                <div class="relative bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-3xl p-8">
-                    <h3 class="text-3xl font-bold text-white mb-4">
-                        ¿Listo para cambiar tu futuro?
-                    </h3>
-                    <p class="text-slate-300 mb-6 max-w-2xl mx-auto">
-                        Únete a millones de estudiantes que han transformado sus vidas con TOEFL. 
-                        Tu aventura global comienza aquí.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#certificaciones" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-                            Comenzar Ahora
-                        </a>
-                        <a href="https://wa.me/51927365498" class="border-2 border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105">
-                            Hablar con Experto
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modern Wave Bottom -->
-    <div class="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
-        <svg class="absolute bottom-0 w-full h-32" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <defs>
-                <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:#f9fafb;stop-opacity:1" />
-                    <stop offset="50%" style="stop-color:#f3f4f6;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#f9fafb;stop-opacity:1" />
-                </linearGradient>
-            </defs>
-            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="url(#waveGradient)"/>
-        </svg>
-    </div>
-</section>
-
-    <!-- Servicios Section -->
-<section id="servicios" class="py-20 bg-gray-50 relative overflow-hidden">
-    <!-- Formas decorativas de fondo -->
-    <div class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-    <div class="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-bl from-purple-200 to-pink-200 rounded-full opacity-20 translate-x-1/3"></div>
-    <div class="absolute bottom-0 left-1/4 w-64 h-64 bg-gradient-to-tr from-green-200 to-blue-200 rounded-full opacity-20 translate-y-1/2"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16 fade-in">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">¿Qué servicios ofrecemos en evaluación de inglés?</h2>
-            <p class="text-xl text-gray-600">Soluciones integrales para todas tus necesidades de certificación</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Exámenes Estandarizados -->
-            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
-                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-bl-full opacity-10"></div>
-                <div class="relative z-10">
-                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Exámenes Estandarizados TOELF</h3>
-                    <p class="text-gray-600 leading-relaxed">En Language Assessment Solutions evaluamos tus habilidades del Inglés: lectura, escritura, audición y habla; con la prueba estandarizada TOELF iBT. ¡No solamente eso! también evaluamos tus habilidades básicas del inglés: lectura, escritura, audición y vocabulario con TOEL ITP. </p>
-                </div>
-            </div>
-
-            <!-- Certificación Académica -->
-            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
-                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-bl-full opacity-10"></div>
-                <div class="relative z-10">
-                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Certificación Académica</h3>
-                    <p class="text-gray-600 leading-relaxed">Certificados reconocidos por instituciones educativas para admisiones universitarias, programas de intercambio y estudios superiores.</p>
-                </div>
-            </div>
-
-            <!-- Certificación Profesional -->
-            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
-                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-bl-full opacity-10"></div>
-                <div class="relative z-10">
-                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Certificación Profesional</h3>
-                    <p class="text-gray-600 leading-relaxed">Validación de competencias lingüísticas para el ámbito laboral, reconocida por empleadores y organizaciones profesionales.</p>
-                </div>
-            </div>
-
-            <!-- Soluciones Corporativas -->
-            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
-                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-bl-full opacity-10"></div>
-                <div class="relative z-10">
-                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Soluciones Corporativas</h3>
-                    <p class="text-gray-600 leading-relaxed">Programas personalizados para empresas que buscan evaluar y certificar las competencias en inglés de sus equipos de trabajo.</p>
-                </div>
-            </div>
-
-            <!-- Recursos de Preparación -->
-            <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden md:col-span-2 lg:col-span-1">
-                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-600 rounded-bl-full opacity-10"></div>
-                <div class="relative z-10">
-                    <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Recursos de Preparación</h3>
-                    <p class="text-gray-600 leading-relaxed">Materiales de estudio, simulacros de examen y guías especializadas para prepararte efectivamente para tu certificación.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Certificaciones Section -->
-<section id="certificaciones" class="py-20 bg-white relative overflow-hidden">
-    <!-- Formas geométricas de fondo -->
-    <div class="absolute top-0 right-0 w-80 h-80 opacity-5">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#3B82F6" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,89.8,-0.2C89.6,15.9,86.6,31.8,78.9,45.2C71.2,58.6,58.8,69.5,44.7,76.4C30.6,83.3,15.3,86.2,0.1,86.1C-15.1,86,-30.2,82.9,-44.7,76.4C-59.2,69.9,-73.1,60,-81.6,46.8C-90.1,33.6,-93.2,17.1,-93.4,0.4C-93.6,-16.3,-90.9,-32.6,-82.4,-45.8C-73.9,-59,-59.6,-69.1,-44.7,-76.4C-29.8,-83.7,-14.9,-88.2,0.1,-88.3C15.1,-88.4,30.2,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
-        </svg>
-    </div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 opacity-5">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#8B5CF6" d="M39.9,-69.8C52.7,-63.2,64.8,-53.4,72.4,-40.8C80,-28.2,83.1,-14.1,83.5,0.2C83.9,14.5,81.6,29,74.8,41.8C68,54.6,56.7,65.7,43.9,72.4C31.1,79.1,15.6,81.4,0.7,80.4C-14.2,79.4,-28.4,75.1,-41.1,68.4C-53.8,61.7,-65,52.6,-72.4,40.8C-79.8,29,-83.4,14.5,-83.7,-0.2C-84,-14.9,-81,-29.8,-73.6,-42.1C-66.2,-54.4,-54.4,-64.1,-41.1,-70.7C-27.8,-77.3,-13.9,-80.8,0.7,-82C15.3,-83.2,30.6,-82.1,39.9,-69.8Z" transform="translate(100 100)" />
-        </svg>
-    </div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16 fade-in">
-            <div class="inline-block p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl mb-6">
-                <i class="fas fa-award text-4xl text-primary"></i>
-            </div>
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">¿Qué certificaciones ofrecemos?</h2>
-            <p class="text-xl text-gray-600">Niveles de competencia reconocidos internacionalmente</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- A1-A2 -->
-            <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-green-500">
-                <div class="absolute top-4 right-4 w-16 h-16 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center">
-                    <i class="fas fa-seedling text-2xl text-green-600"></i>
-                </div>
-                <div class="text-4xl font-bold mb-2 text-green-600">A1-A2</div>
-                <h3 class="text-xl font-semibold mb-4">Inglés Básico</h3>
-                <p class="text-gray-600 leading-relaxed">Comprensión y uso de expresiones cotidianas. Capacidad para presentarse y hacer preguntas básicas sobre información personal.</p>
-            </div>
-
-            <!-- B1 -->
-            <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-blue-500">
-                <div class="absolute top-4 right-4 w-16 h-16 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center">
-                    <i class="fas fa-mountain text-2xl text-blue-600"></i>
-                </div>
-                <div class="text-4xl font-bold mb-2 text-blue-600">B1</div>
-                <h3 class="text-xl font-semibold mb-4">Inglés Intermedio</h3>
-                <p class="text-gray-600 leading-relaxed">Comprensión de textos sobre temas familiares. Capacidad para describir experiencias, eventos y expresar opiniones de manera sencilla.</p>
-            </div>
-
-            <!-- B2 -->
-            <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-purple-500">
-                <div class="absolute top-4 right-4 w-16 h-16 bg-purple-500 bg-opacity-20 rounded-full flex items-center justify-center">
-                    <i class="fas fa-rocket text-2xl text-purple-600"></i>
-                </div>
-                <div class="text-4xl font-bold mb-2 text-purple-600">B2</div>
-                <h3 class="text-xl font-semibold mb-4">Intermedio Alto</h3>
-                <p class="text-gray-600 leading-relaxed">Comprensión de textos complejos y comunicación fluida con hablantes nativos. Capacidad para argumentar y defender puntos de vista.</p>
-            </div>
-
-            <!-- C1 -->
-            <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-orange-500">
-                <div class="absolute top-4 right-4 w-16 h-16 bg-orange-500 bg-opacity-20 rounded-full flex items-center justify-center">
-                    <i class="fas fa-crown text-2xl text-orange-600"></i>
-                </div>
-                <div class="text-4xl font-bold mb-2 text-orange-600">C1</div>
-                <h3 class="text-xl font-semibold mb-4">Inglés Avanzado</h3>
-                <p class="text-gray-600 leading-relaxed">Comprensión de textos extensos y complejos. Uso flexible y efectivo del idioma para fines académicos y profesionales.</p>
-            </div>
-
-            <!-- C2 -->
-            <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-red-500">
-                <div class="absolute top-4 right-4 w-16 h-16 bg-red-500 bg-opacity-20 rounded-full flex items-center justify-center">
-                    <i class="fas fa-trophy text-2xl text-red-600"></i>
-                </div>
-                <div class="text-4xl font-bold mb-2 text-red-600">C2</div>
-                <h3 class="text-xl font-semibold mb-4">Dominio del Idioma</h3>
-                <p class="text-gray-600 leading-relaxed">Comprensión total del idioma. Capacidad para expresarse de manera espontánea, fluida y precisa en cualquier situación compleja.</p>
-            </div>
-
-            <!-- Business -->
-            <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-gray-700">
-                <div class="absolute top-4 right-4 w-16 h-16 bg-gray-700 bg-opacity-20 rounded-full flex items-center justify-center">
-                    <i class="fas fa-handshake text-2xl text-gray-700"></i>
-                </div>
-                <div class="text-4xl font-bold mb-2 text-gray-700">Business</div>
-                <h3 class="text-xl font-semibold mb-4">Inglés Empresarial</h3>
-                <p class="text-gray-600 leading-relaxed">Competencias específicas para el ámbito corporativo. Comunicación efectiva en presentaciones, negociaciones y entornos profesionales.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Acerca de Section -->
-<section id="acerca" class="py-20 bg-gray-50 relative overflow-hidden">
-    <!-- Elementos decorativos de fondo -->
-    <div class="absolute top-0 left-0 w-full h-full">
-        <div class="absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
-        <div class="absolute top-40 right-20 w-24 h-24 bg-purple-200 rounded-full opacity-30"></div>
-        <div class="absolute bottom-20 left-1/4 w-40 h-40 bg-green-200 rounded-full opacity-15"></div>
-        <div class="absolute bottom-40 right-10 w-28 h-28 bg-pink-200 rounded-full opacity-25"></div>
-    </div>
-    
-    <!-- Patrón geométrico -->
-    <div class="absolute inset-0 opacity-5">
-        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-                    <path d="m 60,0 L 0,0 0,60" fill="none" stroke="#3B82F6" stroke-width="1"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-    </div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="fade-in">
-                <div class="inline-block p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6">
-                    <i class="fas fa-users text-3xl text-white"></i>
-                </div>
-                <h2 class="text-4xl font-bold text-gray-800 mb-6">Acerca de Language Assessment Solutions</h2>
-                <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
-                    <div class="relative pl-6">
-                        <div class="absolute left-0 top-2 w-3 h-3 bg-blue-500 rounded-full"></div>
-                        <p>Con más de 15 años de experiencia en evaluación lingüística, Language Assessment Solutions se ha convertido en un nombre de confianza en certificación de inglés a nivel mundial. Nuestras evaluaciones son reconocidas por miles de instituciones educativas y empleadores en todo el mundo.</p>
-                    </div>
-                    
-                    <div class="relative pl-6">
-                        <div class="absolute left-0 top-2 w-3 h-3 bg-purple-500 rounded-full"></div>
-                        <p>Nuestro equipo de lingüistas, educadores y especialistas en evaluación desarrolla y mantiene estándares rigurosos de certificación que miden con precisión la competencia en inglés según marcos internacionales.</p>
-                    </div>
-                    
-                    <div class="relative pl-6">
-                        <div class="absolute left-0 top-2 w-3 h-3 bg-green-500 rounded-full"></div>
-                        <p>Nos enorgullecemos de ofrecer evaluaciones justas, accesibles y confiables que abren puertas a oportunidades académicas y profesionales para examinados en todo el mundo.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="fade-in">
-                <div class="relative">
-                    <!-- Fondo decorativo detrás de la imagen -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl transform rotate-3 scale-105"></div>
-
-                    <!-- Imagen al frente con efecto de rotación inversa -->
-                    <div class="relative transform -rotate-1 hover:rotate-0 transition-transform duration-500 rounded-3xl shadow-2xl overflow-hidden">
-                        <img src="/images/amistad.webp" alt="Equipo de Language Assessment Solutions" class="w-full h-auto">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Contacto Section -->
-<section id="contacto" class="py-20 bg-white relative overflow-hidden">
-    <!-- Fondo con ondas -->
-    <div class="absolute top-0 left-0 w-full h-32">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0L60 10C120 20 240 40 360 50C480 60 600 60 720 55C840 50 960 40 1080 35C1200 30 1320 30 1380 30L1440 30V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0Z" fill="#f3f4f6" fill-opacity="0.5"/>
-        </svg>
-    </div>
-    
-    <!-- Elementos decorativos flotantes -->
-    <div class="absolute top-20 right-20 w-20 h-20 bg-gradient-to-br from-blue-300 to-purple-400 rounded-2xl opacity-20 transform rotate-45"></div>
-    <div class="absolute bottom-32 left-16 w-16 h-16 bg-gradient-to-br from-green-300 to-blue-400 rounded-full opacity-25"></div>
-    <div class="absolute top-1/2 left-10 w-12 h-12 bg-gradient-to-br from-pink-300 to-red-400 rounded-2xl opacity-20 transform rotate-12"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16 fade-in">
-            <div class="inline-block p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-6">
-                <i class="fas fa-envelope text-4xl text-primary"></i>
-            </div>
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">Información de Contacto</h2>
-            <p class="text-xl text-gray-600">Estamos aquí para ayudarte en tu proceso de certificación</p>
-        </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <!-- Información de contacto -->
-            <div class="fade-in">
-                <div class="relative">
-                    <!-- Fondo decorativo -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl transform rotate-2"></div>
-                    <div class="relative bg-white rounded-3xl shadow-xl p-8 transform -rotate-1">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-8">Síguenos en nuestras redes sociales</h3>
-                        <div class="flex space-x-4 mb-8">
-                            <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-rotate-12">
-                                <i class="fab fa-facebook-f text-xl"></i>
-                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </a>
-                            <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-110 hover:rotate-12">
-                                <i class="fab fa-tiktok text-xl"></i>
-                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-black rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </a>
-                            <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-rotate-12">
-                                <i class="fab fa-instagram text-xl"></i>
-                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </a>
-                            <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-blue-700 hover:text-white transition-all duration-300 transform hover:scale-110 hover:rotate-12">
-                                <i class="fab fa-linkedin-in text-xl"></i>
-                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </a>
+                            <span class="block text-white">Global</span>
+                        </h1>
+                        
+                        <div class="relative">
+                            <h2 class="text-2xl md:text-4xl font-bold text-slate-300">
+                                Comienza con 
+                                <span class="relative inline-block">
+                                    <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">TOEFL</span>
+                                    <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                                </span>
+                            </h2>
                         </div>
                         
-                        <div class="space-y-6">
-                            <div class="flex items-center group">
-                                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-envelope text-white"></i>
+                        <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
+                            Desbloquea oportunidades ilimitadas en las mejores universidades del mundo. 
+                            <span class="text-purple-400 font-semibold">11,500+ instituciones</span> confían en TOEFL.
+                        </p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#certificaciones" class="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                            <span class="relative z-10 flex items-center gap-3">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                                Explorar Exámenes
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                        </a>
+                        
+                        <a href="https://wa.me/51927365498" class="group relative overflow-hidden border-2 border-slate-600 hover:border-cyan-400 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105">
+                            <span class="relative z-10 flex items-center gap-3 text-slate-300 group-hover:text-white">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                Asesoría Gratuita
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-wrap gap-6 text-sm">
+                        <div class="flex items-center gap-2 text-slate-400">
+                            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                            <span>Harvard • MIT • Stanford</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-400">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                            <span>160+ Países</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-400">
+                            <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                            <span>50M+ Certificados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content - Floating Cards -->
+                <div class="lg:col-span-5 relative">
+                    <!-- Stats Cards Floating -->
+                    <div class="relative space-y-6">
+                        <!-- Card 1 -->
+                        <div class="group relative ml-8 transform hover:scale-105 transition-all duration-500">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                            <div class="relative bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-2xl p-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-3xl font-bold text-white">11,500+</div>
+                                        <div class="text-slate-400">Universidades</div>
+                                    </div>
                                 </div>
-                                <span class="text-gray-600 text-lg">info@languageassessment.com</span>
                             </div>
-                            <div class="flex items-center group">
-                                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-phone text-white"></i>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="group relative mr-8 transform hover:scale-105 transition-all duration-500" style="animation-delay: 0.2s">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                            <div class="relative bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-2xl p-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-3xl font-bold text-white">160+</div>
+                                        <div class="text-slate-400">Países</div>
+                                    </div>
                                 </div>
-                                <span class="text-gray-600 text-lg">+1 (555) 123-4567</span>
                             </div>
-                            <div class="flex items-center group">
-                                <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="group relative ml-4 transform hover:scale-105 transition-all duration-500" style="animation-delay: 0.4s">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                            <div class="relative bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-2xl p-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-3xl font-bold text-white">50M+</div>
+                                        <div class="text-slate-400">Certificados</div>
+                                    </div>
                                 </div>
-                                <span class="text-gray-600 text-lg">123 Education Street, Learning City, LC 12345</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Formulario -->
-            <div class="fade-in">
-                <div class="relative">
-                    <!-- Fondo decorativo del formulario -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl transform -rotate-2"></div>
-                    <div class="relative bg-white rounded-3xl shadow-2xl p-8 transform rotate-1">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Envíanos un mensaje</h3>
-                        <form class="space-y-6">
-                            <div class="relative">
-                                <input type="text" placeholder="Nombre completo" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
-                                <div class="absolute top-4 right-4 text-gray-400">
-                                    <i class="fas fa-user"></i>
+
+            <!-- TOEFL Types - Modern Cards -->
+            <div class="mt-20 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- TOEFL ITP -->
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative bg-slate-800/90 backdrop-blur-xl border border-slate-700 rounded-3xl p-8 h-full">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">TOEFL ITP</h3>
+                                <div class="inline-block bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-medium">
+                                    Evaluación Institucional
                                 </div>
                             </div>
-                            <div class="relative">
-                                <input type="email" placeholder="Correo electrónico" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
-                                <div class="absolute top-4 right-4 text-gray-400">
-                                    <i class="fas fa-envelope"></i>
+                        </div>
+                        
+                        <p class="text-slate-300 mb-6 text-lg leading-relaxed">
+                            Perfecto para evaluaciones académicas internas, diagnósticos de nivel y requisitos de graduación universitaria.
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                                <span>Formato en papel tradicional</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                                <span>Resultados inmediatos</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                                <span>Ideal para instituciones educativas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TOEFL iBT -->
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative bg-slate-800/90 backdrop-blur-xl border border-slate-700 rounded-3xl p-8 h-full">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">TOEFL iBT</h3>
+                                <div class="inline-block bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium">
+                                    Reconocimiento Global
                                 </div>
                             </div>
-                            <div class="relative">
-                                <input type="tel" placeholder="Teléfono" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
-                                <div class="absolute top-4 right-4 text-gray-400">
-                                    <i class="fas fa-phone"></i>
-                                </div>
+                        </div>
+                        
+                        <p class="text-slate-300 mb-6 text-lg leading-relaxed">
+                            El estándar de oro para admisiones universitarias, becas internacionales y oportunidades profesionales globales.
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                <span>Formato digital avanzado</span>
                             </div>
-                            <div class="relative">
-                                <select class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white appearance-none">
-                                    <option>Selecciona un servicio</option>
-                                    <option>Exámenes Estandarizados</option>
-                                    <option>Certificación Académica</option>
-                                    <option>Certificación Profesional</option>
-                                    <option>Soluciones Corporativas</option>
-                                    <option>Recursos de Preparación</option>
-                                </select>
-                                <div class="absolute top-4 right-4 text-gray-400">
-                                    <i class="fas fa-chevron-down"></i>
-                                </div>
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                <span>4 habilidades evaluadas</span>
                             </div>
-                            <div class="relative">
-                                <textarea rows="4" placeholder="Mensaje" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white resize-none"></textarea>
-                                <div class="absolute top-4 right-4 text-gray-400">
-                                    <i class="fas fa-comment"></i>
-                                </div>
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                <span>Aceptado mundialmente</span>
                             </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-primary to-purple-600 text-white py-4 rounded-2xl font-semibold hover:from-blue-700 hover:to-purple-700 transition duration-300 transform hover:scale-105 shadow-lg">
-                                <i class="fas fa-paper-plane mr-2"></i>
-                                Enviar Mensaje
-                            </button>
-                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA Section -->
+            <div class="mt-20 text-center">
+                <div class="relative inline-block">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+                    <div class="relative bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-3xl p-8">
+                        <h3 class="text-3xl font-bold text-white mb-4">
+                            ¿Listo para cambiar tu futuro?
+                        </h3>
+                        <p class="text-slate-300 mb-6 max-w-2xl mx-auto">
+                            Únete a millones de estudiantes que han transformado sus vidas con TOEFL. 
+                            Tu aventura global comienza aquí.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="#certificaciones" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                                Comenzar Ahora
+                            </a>
+                            <a href="https://wa.me/51927365498" class="border-2 border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105">
+                                Hablar con Experto
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+
+        <!-- Modern Wave Bottom -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
+            <svg class="absolute bottom-0 w-full h-32" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#f9fafb;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#f3f4f6;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#f9fafb;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="url(#waveGradient)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Formas decorativas de fondo -->
+        <div class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-bl from-purple-200 to-pink-200 rounded-full opacity-20 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-1/4 w-64 h-64 bg-gradient-to-tr from-green-200 to-blue-200 rounded-full opacity-20 translate-y-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">¿Qué servicios ofrecemos en evaluación de inglés?</h2>
+                <p class="text-xl text-gray-600">Soluciones integrales para todas tus necesidades de certificación</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Exámenes Estandarizados -->
+                <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-bl-full opacity-10"></div>
+                    <div class="relative z-10">
+                        <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Exámenes Estandarizados TOELF</h3>
+                        <p class="text-gray-600 leading-relaxed">En Language Assessment Solutions evaluamos tus habilidades del Inglés: lectura, escritura, audición y habla; con la prueba estandarizada TOELF iBT. ¡No solamente eso! también evaluamos tus habilidades básicas del inglés: lectura, escritura, audición y vocabulario con TOEL ITP. </p>
+                    </div>
+                </div>
+
+                <!-- Certificación Académica -->
+                <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-bl-full opacity-10"></div>
+                    <div class="relative z-10">
+                        <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Certificación Académica</h3>
+                        <p class="text-gray-600 leading-relaxed">Certificados reconocidos por instituciones educativas para admisiones universitarias, programas de intercambio y estudios superiores.</p>
+                    </div>
+                </div>
+
+                <!-- Certificación Profesional -->
+                <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-bl-full opacity-10"></div>
+                    <div class="relative z-10">
+                        <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Certificación Profesional</h3>
+                        <p class="text-gray-600 leading-relaxed">Validación de competencias lingüísticas para el ámbito laboral, reconocida por empleadores y organizaciones profesionales.</p>
+                    </div>
+                </div>
+
+                <!-- Soluciones Corporativas -->
+                <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-bl-full opacity-10"></div>
+                    <div class="relative z-10">
+                        <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Soluciones Corporativas</h3>
+                        <p class="text-gray-600 leading-relaxed">Programas personalizados para empresas que buscan evaluar y certificar las competencias en inglés de sus equipos de trabajo.</p>
+                    </div>
+                </div>
+
+                <!-- Recursos de Preparación -->
+                <div class="group relative bg-white rounded-2xl shadow-xl p-8 hover-scale fade-in overflow-hidden md:col-span-2 lg:col-span-1">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-600 rounded-bl-full opacity-10"></div>
+                    <div class="relative z-10">
+                        <div class="text-primary text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Recursos de Preparación</h3>
+                        <p class="text-gray-600 leading-relaxed">Materiales de estudio, simulacros de examen y guías especializadas para prepararte efectivamente para tu certificación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones Section -->
+    <section id="certificaciones" class="py-20 bg-white relative overflow-hidden">
+        <!-- Formas geométricas de fondo -->
+        <div class="absolute top-0 right-0 w-80 h-80 opacity-5">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#3B82F6" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,89.8,-0.2C89.6,15.9,86.6,31.8,78.9,45.2C71.2,58.6,58.8,69.5,44.7,76.4C30.6,83.3,15.3,86.2,0.1,86.1C-15.1,86,-30.2,82.9,-44.7,76.4C-59.2,69.9,-73.1,60,-81.6,46.8C-90.1,33.6,-93.2,17.1,-93.4,0.4C-93.6,-16.3,-90.9,-32.6,-82.4,-45.8C-73.9,-59,-59.6,-69.1,-44.7,-76.4C-29.8,-83.7,-14.9,-88.2,0.1,-88.3C15.1,-88.4,30.2,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 opacity-5">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#8B5CF6" d="M39.9,-69.8C52.7,-63.2,64.8,-53.4,72.4,-40.8C80,-28.2,83.1,-14.1,83.5,0.2C83.9,14.5,81.6,29,74.8,41.8C68,54.6,56.7,65.7,43.9,72.4C31.1,79.1,15.6,81.4,0.7,80.4C-14.2,79.4,-28.4,75.1,-41.1,68.4C-53.8,61.7,-65,52.6,-72.4,40.8C-79.8,29,-83.4,14.5,-83.7,-0.2C-84,-14.9,-81,-29.8,-73.6,-42.1C-66.2,-54.4,-54.4,-64.1,-41.1,-70.7C-27.8,-77.3,-13.9,-80.8,0.7,-82C15.3,-83.2,30.6,-82.1,39.9,-69.8Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-block p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl mb-6">
+                    <i class="fas fa-award text-4xl text-primary"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">¿Qué certificaciones ofrecemos?</h2>
+                <p class="text-xl text-gray-600">Niveles de competencia reconocidos internacionalmente</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- A1-A2 -->
+                <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-green-500">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-seedling text-2xl text-green-600"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2 text-green-600">A1-A2</div>
+                    <h3 class="text-xl font-semibold mb-4">Inglés Básico</h3>
+                    <p class="text-gray-600 leading-relaxed">Comprensión y uso de expresiones cotidianas. Capacidad para presentarse y hacer preguntas básicas sobre información personal.</p>
+                </div>
+
+                <!-- B1 -->
+                <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-blue-500">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-mountain text-2xl text-blue-600"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2 text-blue-600">B1</div>
+                    <h3 class="text-xl font-semibold mb-4">Inglés Intermedio</h3>
+                    <p class="text-gray-600 leading-relaxed">Comprensión de textos sobre temas familiares. Capacidad para describir experiencias, eventos y expresar opiniones de manera sencilla.</p>
+                </div>
+
+                <!-- B2 -->
+                <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-purple-500">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-purple-500 bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-rocket text-2xl text-purple-600"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2 text-purple-600">B2</div>
+                    <h3 class="text-xl font-semibold mb-4">Intermedio Alto</h3>
+                    <p class="text-gray-600 leading-relaxed">Comprensión de textos complejos y comunicación fluida con hablantes nativos. Capacidad para argumentar y defender puntos de vista.</p>
+                </div>
+
+                <!-- C1 -->
+                <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-orange-500">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-orange-500 bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-crown text-2xl text-orange-600"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2 text-orange-600">C1</div>
+                    <h3 class="text-xl font-semibold mb-4">Inglés Avanzado</h3>
+                    <p class="text-gray-600 leading-relaxed">Comprensión de textos extensos y complejos. Uso flexible y efectivo del idioma para fines académicos y profesionales.</p>
+                </div>
+
+                <!-- C2 -->
+                <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-red-500">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-red-500 bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-trophy text-2xl text-red-600"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2 text-red-600">C2</div>
+                    <h3 class="text-xl font-semibold mb-4">Dominio del Idioma</h3>
+                    <p class="text-gray-600 leading-relaxed">Comprensión total del idioma. Capacidad para expresarse de manera espontánea, fluida y precisa en cualquier situación compleja.</p>
+                </div>
+
+                <!-- Business -->
+                <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-300 fade-in border-t-4 border-gray-700">
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-gray-700 bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-handshake text-2xl text-gray-700"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2 text-gray-700">Business</div>
+                    <h3 class="text-xl font-semibold mb-4">Inglés Empresarial</h3>
+                    <p class="text-gray-600 leading-relaxed">Competencias específicas para el ámbito corporativo. Comunicación efectiva en presentaciones, negociaciones y entornos profesionales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acerca de Section -->
+    <section id="acerca" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
+            <div class="absolute top-40 right-20 w-24 h-24 bg-purple-200 rounded-full opacity-30"></div>
+            <div class="absolute bottom-20 left-1/4 w-40 h-40 bg-green-200 rounded-full opacity-15"></div>
+            <div class="absolute bottom-40 right-10 w-28 h-28 bg-pink-200 rounded-full opacity-25"></div>
+        </div>
+        
+        <!-- Patrón geométrico -->
+        <div class="absolute inset-0 opacity-5">
+            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                        <path d="m 60,0 L 0,0 0,60" fill="none" stroke="#3B82F6" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <div class="inline-block p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6">
+                        <i class="fas fa-users text-3xl text-white"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Acerca de Language Assessment Solutions</h2>
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <div class="relative pl-6">
+                            <div class="absolute left-0 top-2 w-3 h-3 bg-blue-500 rounded-full"></div>
+                            <p>Con más de 15 años de experiencia en evaluación lingüística, Language Assessment Solutions se ha convertido en un nombre de confianza en certificación de inglés a nivel mundial. Nuestras evaluaciones son reconocidas por miles de instituciones educativas y empleadores en todo el mundo.</p>
+                        </div>
+                        
+                        <div class="relative pl-6">
+                            <div class="absolute left-0 top-2 w-3 h-3 bg-purple-500 rounded-full"></div>
+                            <p>Nuestro equipo de lingüistas, educadores y especialistas en evaluación desarrolla y mantiene estándares rigurosos de certificación que miden con precisión la competencia en inglés según marcos internacionales.</p>
+                        </div>
+                        
+                        <div class="relative pl-6">
+                            <div class="absolute left-0 top-2 w-3 h-3 bg-green-500 rounded-full"></div>
+                            <p>Nos enorgullecemos de ofrecer evaluaciones justas, accesibles y confiables que abren puertas a oportunidades académicas y profesionales para examinados en todo el mundo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="relative">
+                        <!-- Fondo decorativo detrás de la imagen -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl transform rotate-3 scale-105"></div>
+
+                        <!-- Imagen al frente con efecto de rotación inversa -->
+                        <div class="relative transform -rotate-1 hover:rotate-0 transition-transform duration-500 rounded-3xl shadow-2xl overflow-hidden">
+                            <img src="/images/amistad.webp" alt="Equipo de Language Assessment Solutions" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-20 bg-white relative overflow-hidden">
+        <!-- Fondo con ondas -->
+        <div class="absolute top-0 left-0 w-full h-32">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L60 10C120 20 240 40 360 50C480 60 600 60 720 55C840 50 960 40 1080 35C1200 30 1320 30 1380 30L1440 30V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0Z" fill="#f3f4f6" fill-opacity="0.5"/>
+            </svg>
+        </div>
+        
+        <!-- Elementos decorativos flotantes -->
+        <div class="absolute top-20 right-20 w-20 h-20 bg-gradient-to-br from-blue-300 to-purple-400 rounded-2xl opacity-20 transform rotate-45"></div>
+        <div class="absolute bottom-32 left-16 w-16 h-16 bg-gradient-to-br from-green-300 to-blue-400 rounded-full opacity-25"></div>
+        <div class="absolute top-1/2 left-10 w-12 h-12 bg-gradient-to-br from-pink-300 to-red-400 rounded-2xl opacity-20 transform rotate-12"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-block p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-6">
+                    <i class="fas fa-envelope text-4xl text-primary"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Información de Contacto</h2>
+                <p class="text-xl text-gray-600">Estamos aquí para ayudarte en tu proceso de certificación</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Información de contacto -->
+                <div class="fade-in">
+                    <div class="relative">
+                        <!-- Fondo decorativo -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl transform rotate-2"></div>
+                        <div class="relative bg-white rounded-3xl shadow-xl p-8 transform -rotate-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-8">Síguenos en nuestras redes sociales</h3>
+                            <div class="flex space-x-4 mb-8">
+                                <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-rotate-12">
+                                    <i class="fab fa-facebook-f text-xl"></i>
+                                    <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                </a>
+                                <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-110 hover:rotate-12">
+                                    <i class="fab fa-tiktok text-xl"></i>
+                                    <div class="absolute -top-2 -right-2 w-4 h-4 bg-black rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                </a>
+                                <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-rotate-12">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                    <div class="absolute -top-2 -right-2 w-4 h-4 bg-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                </a>
+                                <a href="#" class="group relative w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-600 hover:bg-blue-700 hover:text-white transition-all duration-300 transform hover:scale-110 hover:rotate-12">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                    <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                </a>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center group">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-envelope text-white"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-lg">info@languageassessment.com</span>
+                                </div>
+                                <div class="flex items-center group">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-phone text-white"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-lg">+1 (555) 123-4567</span>
+                                </div>
+                                <div class="flex items-center group">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-lg">123 Education Street, Learning City, LC 12345</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulario -->
+                <div class="fade-in">
+                    <div class="relative">
+                        <!-- Fondo decorativo del formulario -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl transform -rotate-2"></div>
+                        <div class="relative bg-white rounded-3xl shadow-2xl p-8 transform rotate-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Envíanos un mensaje</h3>
+                            <form class="space-y-6">
+                                <div class="relative">
+                                    <input type="text" placeholder="Nombre completo" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
+                                    <div class="absolute top-4 right-4 text-gray-400">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <input type="email" placeholder="Correo electrónico" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
+                                    <div class="absolute top-4 right-4 text-gray-400">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <input type="tel" placeholder="Teléfono" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white">
+                                    <div class="absolute top-4 right-4 text-gray-400">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <select class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white appearance-none">
+                                        <option>Selecciona un servicio</option>
+                                        <option>Exámenes Estandarizados</option>
+                                        <option>Certificación Académica</option>
+                                        <option>Certificación Profesional</option>
+                                        <option>Soluciones Corporativas</option>
+                                        <option>Recursos de Preparación</option>
+                                    </select>
+                                    <div class="absolute top-4 right-4 text-gray-400">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <textarea rows="4" placeholder="Mensaje" class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition duration-300 bg-gray-50 focus:bg-white resize-none"></textarea>
+                                    <div class="absolute top-4 right-4 text-gray-400">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-primary to-purple-600 text-white py-4 rounded-2xl font-semibold hover:from-blue-700 hover:to-purple-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-blue-900 text-white py-12">
