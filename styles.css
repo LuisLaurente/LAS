@@ -90,9 +90,10 @@
 
 .nav-link.active {
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(147, 197, 253, 0.15) 100%);
-    color: #1e40af;
+    color: #fff;
     font-weight: 600;
 }
+
 
 /* Menú móvil - compacto */
 .mobile-menu {
